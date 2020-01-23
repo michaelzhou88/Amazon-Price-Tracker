@@ -1,4 +1,4 @@
-﻿# Amazon_Price_Tracker
+﻿# Amazon Price Tracker
 This script serves as a tool to track prices of products sold on Amazon UK. If the price falls down or below your desired price, it will automatically send an email alert to notify you about it. Code is written in Python to make requests and perform webscraping on amazon.co.uk using Python libraries such as requests, Beautiful Soup and smtplib and getpass. 
 
 # How to run the script
