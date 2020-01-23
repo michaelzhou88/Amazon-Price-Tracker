@@ -9,7 +9,10 @@ This script serves as a tool to track prices of products sold on Amazon UK. If t
 
 # Links to Python libraries used for this script
 [1] https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
 [2] https://docs.python.org/3/library/smtplib.html
+
 [3] https://www.pythonforbeginners.com/requests/using-requests-in-python
+
 [4] https://docs.python.org/2/library/getpass.html
 
