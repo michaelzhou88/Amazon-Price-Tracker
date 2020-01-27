@@ -49,7 +49,7 @@ def check_price():
 
     # Conditional statement to send an email if a price drop occurs
     if(converted_price < converted_desired_price):
-        # Prompt user to enter their user logiin details
+        # Prompt user to enter their user login details
         email_address = input('Email Address: ')
         password = getpass.getpass()
         # Invokes the send_mail function
