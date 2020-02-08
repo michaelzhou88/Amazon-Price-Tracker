@@ -13,6 +13,8 @@ from bs4 import BeautifulSoup
 import smtplib 
 # Hides user input
 import getpass
+# Timer functionality
+import time
 
 
 # Prompts user to input an URL link into the program
@@ -20,6 +22,7 @@ URL = input("Copy and paste a URL link here: ")
 
 # Every time your web browser makes a request to a website, it sends a HTTP Request Header called the "User Agent". 
 # The "User Agent" string contains information about your web browser name, operating system, device type etc
+# You may need to change this depending on your configuration by googling "My User Agent"
 headers = {
     "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'}
 
@@ -87,9 +90,9 @@ def send_mail(email_address, password):
 
     # Performs sending mail transaction
     server.sendmail(
-        email_address,   # Sender
-        email_address,   # Recipient
-        msg              # Message Content
+        replace_with_your_email_address,   # Sender
+        replace_with_your_email_address,   # Recipient
+        msg                                # Message Content
     )
 
     # Confirmation that an email has been sent
@@ -99,5 +102,7 @@ def send_mail(email_address, password):
     server.quit()
 
 
-# Invokes the check_price function
-check_price()
+# Invokes the check_price function once on a daily basis
+while(True):
+    check_price()
+    time.sleep(86400)
